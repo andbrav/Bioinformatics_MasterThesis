@@ -1,0 +1,1098 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     39760,       1090]
+NotebookOptionsPosition[     36642,       1031]
+NotebookOutlinePosition[     37102,       1049]
+CellTagsIndexPosition[     37059,       1046]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"**", "**", "**"}], "*", "LSA", " ", "of", " ", "the", " ", 
+    "system", " ", "with", " ", 
+    RowBox[{"diffusion", " ", "**", "**", "**"}]}], "***)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Equilibrium", " ", "of", " ", "the", " ", "homogeneous", " ", "system"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FullSimplify", "[", 
+    RowBox[{
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "b2"}], "*", "Susceptibles"}], "+", 
+           RowBox[{"b2", "*", 
+            RowBox[{
+             RowBox[{"k2", "^", "n2"}], "/", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k2", "^", "n2"}], "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"Infected", "*", "AREA"}], ")"}], "^", "n2"}]}], 
+              ")"}]}], "*", "DENSITY"}]}], "\[Equal]", "0"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"beta", "*", "Susceptibles", "*", 
+            RowBox[{"Infected", "/", "DENSITY"}]}], "-", 
+           RowBox[{"Infected", "*", "rmu"}]}], "\[Equal]", "0"}]}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"Susceptibles", ",", "Infected"}], "}"}]}], "]"}], ",", 
+     RowBox[{"Assumptions", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Susceptibles", "\[GreaterEqual]", "0"}], ",", 
+        RowBox[{"Infected", "\[GreaterEqual]", "0"}], ",", 
+        RowBox[{"Density", ">", "0"}], ",", 
+        RowBox[{"k2", "\[GreaterEqual]", "0"}], ",", 
+        RowBox[{"n2", "\[GreaterEqual]", "1"}], ",", 
+        RowBox[{"b2", "\[GreaterEqual]", "0"}], ",", 
+        RowBox[{"rmu", "\[GreaterEqual]", "0"}], ",", 
+        RowBox[{"beta", ">", "0"}]}], "}"}]}]}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.8285014676556387`*^9, 3.8285014918967524`*^9}, 
+   3.830402650628291*^9, {3.838555497165958*^9, 3.838555531945127*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"ca18a6ab-905c-4441-bfe2-d4970d94157f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve", "incnst", 
+   "\"Inconsistent or redundant transcendental equation. After reduction, the \
+bad equation is \\!\\(\\*RowBox[{\\\"-\\\", SuperscriptBox[RowBox[{\\\"(\\\", \
+SuperscriptBox[RowBox[{\\\"(\\\", RowBox[{\\\"AREA\\\", \\\" \\\", \
+\\\"Infected\\\"}], \\\")\\\"}], \\\"n2\\\"], \\\")\\\"}], \
+FractionBox[\\\"1\\\", \\\"n2\\\"]]}]\\) == 0.\"", 2, 2, 2238, 
+   19214168657943984082, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.8285014929438868`*^9, 3.828510085138275*^9, 3.829041025358684*^9, 
+   3.82910474871947*^9, 3.829302516225923*^9, 3.830402652337529*^9, 
+   3.830403349375922*^9, {3.8304038953521357`*^9, 3.830403914414773*^9}, 
+   3.8304078243327312`*^9, 3.832216127466119*^9, {3.8322164442777767`*^9, 
+   3.832216465659789*^9}, {3.8322165417013197`*^9, 3.832216556765476*^9}, 
+   3.8322166299108553`*^9, 3.832224527613317*^9, 3.838555726289435*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"ab6a43b1-3409-45c8-946e-c5ee0e7e4928"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve", "ifun", 
+   "\"Inverse functions are being used by \
+\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\), so some solutions may not be found; use \
+Reduce for complete solution information.\"", 2, 2, 2239, 
+   19214168657943984082, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.8285014929438868`*^9, 3.828510085138275*^9, 3.829041025358684*^9, 
+   3.82910474871947*^9, 3.829302516225923*^9, 3.830402652337529*^9, 
+   3.830403349375922*^9, {3.8304038953521357`*^9, 3.830403914414773*^9}, 
+   3.8304078243327312`*^9, 3.832216127466119*^9, {3.8322164442777767`*^9, 
+   3.832216465659789*^9}, {3.8322165417013197`*^9, 3.832216556765476*^9}, 
+   3.8322166299108553`*^9, 3.832224527613317*^9, 3.83855572629635*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[2]:=",ExpressionUUID->"c31e9a57-3721-44b8-8dc2-020760820907"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Susceptibles", "\[Rule]", "DENSITY"}], ",", 
+     RowBox[{"Infected", "\[Rule]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Susceptibles", "\[Rule]", 
+      FractionBox[
+       RowBox[{"DENSITY", " ", "rmu"}], "beta"]}], ",", 
+     RowBox[{"Infected", "\[Rule]", 
+      FractionBox[
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["k2", "n2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+        FractionBox["1", "n2"]], "AREA"]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.828501492952137*^9, 3.828510085194888*^9, 3.829041025364057*^9, 
+   3.829104748781311*^9, 3.829302516290382*^9, 3.830402652398233*^9, 
+   3.830403349435622*^9, {3.830403895358983*^9, 3.8304039144812803`*^9}, 
+   3.830407824386559*^9, 3.832216127526619*^9, {3.8322164442850857`*^9, 
+   3.832216465666737*^9}, {3.832216541708959*^9, 3.832216556847837*^9}, 
+   3.83221662999016*^9, 3.8322245276811028`*^9, 3.838555726351719*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"728fde86-ce40-4c19-941d-c608362ef938"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"1", "D", " ", "Analysis"}], "*)"}], 
+  RowBox[{"(*", "Linearization", "*)"}], 
+  RowBox[{
+   RowBox[{"LinearizedEq", "=", 
+    RowBox[{"Normal", "[", 
+     RowBox[{"Series", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "b2"}], "*", "Susceptibles"}], "+", 
+        RowBox[{"b2", "*", 
+         RowBox[{
+          RowBox[{"k2", "^", "n2"}], "/", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"k2", "^", "n2"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"Infected", "*", "AREA"}], ")"}], "^", "n2"}]}], 
+           ")"}]}], "*", "DENSITY"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Susceptibles", ",", "Seq", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Infected", ",", "Ieq", ",", "1"}], "}"}]}], "]"}], "]"}]}], 
+   "\n", 
+   RowBox[{"LinearizeEq2", "=", 
+    RowBox[{"Normal", "[", 
+     RowBox[{"Series", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"beta", "*", "Susceptibles", "*", 
+         RowBox[{"Infected", "/", "DENSITY"}]}], "-", 
+        RowBox[{"Infected", "*", "rmu"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Susceptibles", ",", "Seq", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Infected", ",", "Ieq", ",", "1"}], "}"}]}], "]"}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{
+  3.828501544574011*^9, {3.8291048042814627`*^9, 3.829104805694469*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"2852cebf-22ee-4edc-a2c1-a83daa82ea6a"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"b2", " ", "DENSITY", " ", 
+    SuperscriptBox["k2", "n2"]}], 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"AREA", " ", "Ieq"}], ")"}], "n2"], "+", 
+    SuperscriptBox["k2", "n2"]}]], "-", 
+  FractionBox[
+   RowBox[{"AREA", " ", "b2", " ", "DENSITY", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"AREA", " ", "Ieq"}], ")"}], 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "n2"}]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "Ieq"}], "+", "Infected"}], ")"}], " ", 
+    SuperscriptBox["k2", "n2"], " ", "n2"}], 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"AREA", " ", "Ieq"}], ")"}], "n2"], "+", 
+      SuperscriptBox["k2", "n2"]}], ")"}], "2"]], "-", 
+  RowBox[{"b2", " ", "Seq"}], "-", 
+  RowBox[{"b2", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "Seq"}], "+", "Susceptibles"}], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.8285167157525063`*^9, 3.8285187187507057`*^9, 3.829041028482986*^9, 
+   3.82910480642759*^9, 3.829301510471271*^9, 3.829302517667405*^9, 
+   3.829328750460753*^9, 3.8304026548768187`*^9, 3.830403350710327*^9, {
+   3.830403897905738*^9, 3.8304039178890753`*^9}, 3.83040782572108*^9, 
+   3.832216130390182*^9, {3.832216446039589*^9, 3.832216467629841*^9}, 
+   3.832216559399877*^9, 3.832216632342361*^9, 3.832224530259716*^9, 
+   3.838555727836673*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"857544ca-357d-4d35-842d-20fdb048b89b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "Ieq"}], " ", "rmu"}], "+", 
+  FractionBox[
+   RowBox[{"beta", " ", "Ieq", " ", "Seq"}], "DENSITY"], "+", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "Ieq"}], "+", "Infected"}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "rmu"}], "+", 
+     FractionBox[
+      RowBox[{"beta", " ", "Seq"}], "DENSITY"]}], ")"}]}], "+", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"beta", " ", "Ieq"}], "DENSITY"], "+", 
+     FractionBox[
+      RowBox[{"beta", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "Ieq"}], "+", "Infected"}], ")"}]}], "DENSITY"]}], 
+    ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "Seq"}], "+", "Susceptibles"}], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.8285167157525063`*^9, 3.8285187187507057`*^9, 3.829041028482986*^9, 
+   3.82910480642759*^9, 3.829301510471271*^9, 3.829302517667405*^9, 
+   3.829328750460753*^9, 3.8304026548768187`*^9, 3.830403350710327*^9, {
+   3.830403897905738*^9, 3.8304039178890753`*^9}, 3.83040782572108*^9, 
+   3.832216130390182*^9, {3.832216446039589*^9, 3.832216467629841*^9}, 
+   3.832216559399877*^9, 3.832216632342361*^9, 3.832224530259716*^9, 
+   3.838555727847521*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"b03bef18-e59b-4422-92f8-0ab94169d6ea"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Replace", " ", 
+    RowBox[{"(", 
+     RowBox[{"X", "-", "X0"}], ")"}], " ", "by", " ", "dX"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"LinearizedEq", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"b2", " ", "DENSITY", " ", 
+         RowBox[{"k2", "^", "n2"}]}], ")"}], "/", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"AREA", " ", "Ieq"}], ")"}], "^", "n2"}], "+", 
+         RowBox[{"k2", "^", "n2"}]}], ")"}]}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"AREA", " ", "b2", " ", "DENSITY", " ", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"AREA", " ", "Ieq"}], ")"}], "^", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "n2"}], ")"}]}], " ", "dI", " ", 
+         RowBox[{"k2", "^", "n2"}], " ", "n2"}], ")"}], "/", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"AREA", " ", "Ieq"}], ")"}], "^", "n2"}], "+", 
+          RowBox[{"k2", "^", "n2"}]}], ")"}], "^", "2"}]}], "-", 
+      RowBox[{"b2", " ", "Seq"}], "-", 
+      RowBox[{"b2", " ", "dS"}]}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"LinearizedEq2", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Ieq"}], " ", "rmu"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"beta", " ", "Ieq", " ", "Seq"}], ")"}], "/", "DENSITY"}], 
+      "+", 
+      RowBox[{"dI", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "rmu"}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"beta", " ", "Seq"}], ")"}], "/", "DENSITY"}]}], ")"}]}], 
+      "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"beta", " ", "Ieq"}], ")"}], "/", "DENSITY"}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"beta", " ", "dI"}], ")"}], "/", "DENSITY"}]}], ")"}], " ",
+        "dS"}]}]}], ";"}], "\n", 
+   RowBox[{"LinearizedEq", "=", 
+    RowBox[{"FullSimplify", "[", 
+     RowBox[{"LinearizedEq", ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "b2"}], "*", "Seq"}], "+", 
+           RowBox[{"b2", "*", 
+            RowBox[{"k2", "^", "n2"}], "*", 
+            RowBox[{"DENSITY", "/", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k2", "^", "n2"}], "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"Ieq", "*", "AREA"}], ")"}], "^", "n2"}]}], 
+              ")"}]}]}]}], "\[Equal]", "0"}], ",", 
+         RowBox[{
+          RowBox[{"dI", "*", "dS"}], "\[Equal]", "0"}]}], "}"}]}]}], "]"}]}], 
+   "\n", 
+   RowBox[{"LinearizedEq2", "=", 
+    RowBox[{"FullSimplify", "[", 
+     RowBox[{"LinearizedEq2", ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"beta", "*", "Seq", "*", 
+            RowBox[{"Ieq", "/", "DENSITY"}]}], "-", 
+           RowBox[{"Ieq", "*", "rmu"}]}], "\[Equal]", "0"}], ",", 
+         RowBox[{
+          RowBox[{"dI", "*", "dS"}], "\[Equal]", "0"}]}], "}"}]}]}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{
+  3.828501555663383*^9, {3.8304038823912897`*^9, 3.830403884695155*^9}, 
+   3.832216483865993*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"45f6cca2-fd43-4bb7-9ca5-2beddef9d53c"],
+
+Cell[BoxData[
+ RowBox[{"b2", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "dS"}], "+", 
+    FractionBox[
+     RowBox[{"DENSITY", " ", 
+      SuperscriptBox["k2", "n2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Ieq", " ", 
+         SuperscriptBox["k2", "n2"]}], "+", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"AREA", " ", "Ieq"}], ")"}], "n2"], " ", 
+         RowBox[{"(", 
+          RowBox[{"Ieq", "-", 
+           RowBox[{"dI", " ", "n2"}]}], ")"}]}]}], ")"}]}], 
+     RowBox[{"Ieq", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"AREA", " ", "Ieq"}], ")"}], "n2"], "+", 
+         SuperscriptBox["k2", "n2"]}], ")"}], "2"]}]], "-", "Seq"}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.8285167212224283`*^9, 3.8285187207900057`*^9, 3.82904103097405*^9, 
+   3.8291048093180513`*^9, 3.8293015131901207`*^9, 3.829302519765356*^9, 
+   3.8293287531475687`*^9, 3.830402657273858*^9, 3.8304033537319717`*^9, {
+   3.830403891173191*^9, 3.830403924525038*^9}, 3.8304078281247253`*^9, 
+   3.832216133619278*^9, {3.832216449165681*^9, 3.832216486635188*^9}, 
+   3.832216581874436*^9, 3.832216639851355*^9, 3.832224535062018*^9, 
+   3.8385557310334387`*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"77f283f2-e9ef-4ad7-a8b3-716c01ff390d"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   RowBox[{"beta", " ", "dS", " ", "Ieq"}], "-", 
+   RowBox[{"DENSITY", " ", "dI", " ", "rmu"}], "+", 
+   RowBox[{"beta", " ", "dI", " ", "Seq"}]}], "DENSITY"]], "Output",
+ CellChangeTimes->{
+  3.8285167212224283`*^9, 3.8285187207900057`*^9, 3.82904103097405*^9, 
+   3.8291048093180513`*^9, 3.8293015131901207`*^9, 3.829302519765356*^9, 
+   3.8293287531475687`*^9, 3.830402657273858*^9, 3.8304033537319717`*^9, {
+   3.830403891173191*^9, 3.830403924525038*^9}, 3.8304078281247253`*^9, 
+   3.832216133619278*^9, {3.832216449165681*^9, 3.832216486635188*^9}, 
+   3.832216581874436*^9, 3.832216639851355*^9, 3.832224535062018*^9, 
+   3.838555731070505*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"3590c478-0bb2-4fb8-8875-33be63533a8c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "Fourier", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FourierEq", "=", 
+    RowBox[{"LinearizedEq", "-", 
+     RowBox[{"Ds", "*", 
+      RowBox[{"K", "^", "2"}], "*", "dS"}]}]}], "\n", 
+   RowBox[{"FourierEq2", "=", 
+    RowBox[{"LinearizedEq2", "-", 
+     RowBox[{"Di", "*", 
+      RowBox[{"K", "^", "2"}], "*", "dI"}]}]}]}]}]], "Input",
+ CellChangeTimes->{3.8285015655811987`*^9, 3.828501611499147*^9},
+ CellLabel->"In[9]:=",ExpressionUUID->"53b1e342-9b6d-44c9-8e9f-5a7a6c74794b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "dS"}], " ", "Ds", " ", 
+   SuperscriptBox["K", "2"]}], "+", 
+  RowBox[{"b2", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "dS"}], "+", 
+     FractionBox[
+      RowBox[{"DENSITY", " ", 
+       SuperscriptBox["k2", "n2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Ieq", " ", 
+          SuperscriptBox["k2", "n2"]}], "+", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"AREA", " ", "Ieq"}], ")"}], "n2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"Ieq", "-", 
+            RowBox[{"dI", " ", "n2"}]}], ")"}]}]}], ")"}]}], 
+      RowBox[{"Ieq", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"AREA", " ", "Ieq"}], ")"}], "n2"], "+", 
+          SuperscriptBox["k2", "n2"]}], ")"}], "2"]}]], "-", "Seq"}], 
+    ")"}]}]}]], "Output",
+ CellChangeTimes->{3.828516722910151*^9, 3.828518723313559*^9, 
+  3.829041033540279*^9, 3.829104811864114*^9, 3.829301514850801*^9, 
+  3.829302522624946*^9, 3.829328754291668*^9, 3.830402660230238*^9, 
+  3.830403355096739*^9, 3.830403929114718*^9, 3.8304078298497334`*^9, 
+  3.8322161366445293`*^9, 3.8322164927004766`*^9, 3.832216656271244*^9, 
+  3.8322245381009893`*^9, 3.838555733441884*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"62928121-0bbd-4c5d-819a-029406232d9b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "dI"}], " ", "Di", " ", 
+   SuperscriptBox["K", "2"]}], "+", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"beta", " ", "dS", " ", "Ieq"}], "-", 
+    RowBox[{"DENSITY", " ", "dI", " ", "rmu"}], "+", 
+    RowBox[{"beta", " ", "dI", " ", "Seq"}]}], "DENSITY"]}]], "Output",
+ CellChangeTimes->{3.828516722910151*^9, 3.828518723313559*^9, 
+  3.829041033540279*^9, 3.829104811864114*^9, 3.829301514850801*^9, 
+  3.829302522624946*^9, 3.829328754291668*^9, 3.830402660230238*^9, 
+  3.830403355096739*^9, 3.830403929114718*^9, 3.8304078298497334`*^9, 
+  3.8322161366445293`*^9, 3.8322164927004766`*^9, 3.832216656271244*^9, 
+  3.8322245381009893`*^9, 3.838555733444096*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"b86292d0-bb50-47f5-8482-75be0c83cfba"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"{", 
+    RowBox[{"FourierEq", ",", "FourierEq2"}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"b", "=", 
+   RowBox[{"{", 
+    RowBox[{"dS", ",", "dI"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"D", "[", 
+  RowBox[{"a", ",", 
+   RowBox[{"{", "b", "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.832224545003602*^9, 3.8322245533981733`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"e61f41fb-42ff-4304-931d-e5c9277b051b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "b2"}], "-", 
+      RowBox[{"Ds", " ", 
+       SuperscriptBox["K", "2"]}]}], ",", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"b2", " ", "DENSITY", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"AREA", " ", "Ieq"}], ")"}], "n2"], " ", 
+        SuperscriptBox["k2", "n2"], " ", "n2"}], 
+       RowBox[{"Ieq", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"AREA", " ", "Ieq"}], ")"}], "n2"], "+", 
+           SuperscriptBox["k2", "n2"]}], ")"}], "2"]}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"beta", " ", "Ieq"}], "DENSITY"], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "Di"}], " ", 
+       SuperscriptBox["K", "2"]}], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "DENSITY"}], " ", "rmu"}], "+", 
+        RowBox[{"beta", " ", "Seq"}]}], "DENSITY"]}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.832224554510105*^9, 3.8385557366800003`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"3d96703d-6d53-4f4d-a95a-ff1885ea2110"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "Jacobian", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", "=", 
+     RowBox[{"{", 
+      RowBox[{"FourierEq", ",", "FourierEq2"}], "}"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"b", "=", 
+     RowBox[{"{", 
+      RowBox[{"dS", ",", "dI"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"JacobianSCIR", "=", 
+    RowBox[{"FullSimplify", "[", 
+     RowBox[{
+      RowBox[{"Limit", "[", 
+       RowBox[{
+        RowBox[{"Limit", "[", 
+         RowBox[{
+          RowBox[{"D", "[", 
+           RowBox[{"a", ",", 
+            RowBox[{"{", "b", "}"}]}], "]"}], ",", 
+          RowBox[{"Ieq", "\[Rule]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"k2", "^", "n2"}], " ", 
+                 RowBox[{"(", 
+                  RowBox[{"beta", "-", "rmu"}], ")"}]}], ")"}], "/", "rmu"}], 
+              ")"}], "^", 
+             RowBox[{"(", 
+              RowBox[{"1", "/", "n2"}], ")"}]}], "/", "AREA"}]}]}], "]"}], 
+        ",", 
+        RowBox[{"Seq", "\[Rule]", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"DENSITY", " ", "rmu"}], ")"}], "/", "beta"}]}]}], "]"}], 
+      ",", 
+      RowBox[{"Assumptions", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Seq", "\[GreaterEqual]", "0"}], ",", 
+         RowBox[{"Ieq", "\[GreaterEqual]", "0"}], ",", 
+         RowBox[{"AREA", ">", "0"}], ",", 
+         RowBox[{"DENSITY", ">", "0"}], ",", 
+         RowBox[{"k2", "\[GreaterEqual]", "0"}], ",", 
+         RowBox[{"n2", "\[GreaterEqual]", "1"}], ",", 
+         RowBox[{"b2", "\[GreaterEqual]", "0"}], ",", 
+         RowBox[{"rmu", "\[GreaterEqual]", "0"}], ",", 
+         RowBox[{"beta", ">", "0"}]}], "}"}]}]}], "]"}]}], "\n"}]}]], "Input",\
+
+ CellChangeTimes->{{3.828501619665502*^9, 3.8285016239503508`*^9}, {
+  3.83221667847854*^9, 3.832216697354247*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"b85a2666-35a3-4e25-b8c7-6f7d1314b692"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "b2"}], "-", 
+      RowBox[{"Ds", " ", 
+       SuperscriptBox["K", "2"]}]}], ",", 
+     FractionBox[
+      RowBox[{"AREA", " ", "b2", " ", "DENSITY", " ", "n2", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["k2", "n2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+        RowBox[{
+         RowBox[{"-", "1"}], "/", "n2"}]], " ", "rmu", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "beta"}], "+", "rmu"}], ")"}]}], 
+      SuperscriptBox["beta", "2"]]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"beta", " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["k2", "n2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+        FractionBox["1", "n2"]]}], 
+      RowBox[{"AREA", " ", "DENSITY"}]], ",", 
+     RowBox[{
+      RowBox[{"-", "Di"}], " ", 
+      SuperscriptBox["K", "2"]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.828516724768366*^9, 3.8285187250214787`*^9, 
+  3.8290410355481567`*^9, 3.829104814703414*^9, 3.829301516437477*^9, 
+  3.829302524220354*^9, 3.8293287562312603`*^9, 3.8304026622138*^9, 
+  3.830403356494137*^9, 3.8304039313843*^9, 3.830407831624832*^9, 
+  3.832216139315366*^9, 3.832216495399178*^9, 3.8322167187544823`*^9, 
+  3.8322245881387873`*^9, 3.838555738887679*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"9d76a601-3e88-43b6-82b2-d689dc0d8200"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"MatrixForm", "[", "JacobianSCIR", "]"}], "\n", 
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"Eigenvalues", "[", "JacobianSCIR", "]"}], "]"}]}], "Input",
+ CellChangeTimes->{
+  3.8285016350976677`*^9, {3.829302444574253*^9, 3.829302501182971*^9}, {
+   3.829302538887517*^9, 3.829302543679788*^9}, 3.830402612447653*^9, {
+   3.832216156507506*^9, 3.832216163784112*^9}, {3.832216735872484*^9, 
+   3.8322167438747168`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"ca931e29-005b-4a03-a4af-d01bb692746d"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{
+       RowBox[{"-", "b2"}], "-", 
+       RowBox[{"Ds", " ", 
+        SuperscriptBox["K", "2"]}]}], 
+      FractionBox[
+       RowBox[{"AREA", " ", "b2", " ", "DENSITY", " ", "n2", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["k2", "n2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+         RowBox[{
+          RowBox[{"-", "1"}], "/", "n2"}]], " ", "rmu", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "beta"}], "+", "rmu"}], ")"}]}], 
+       SuperscriptBox["beta", "2"]]},
+     {
+      FractionBox[
+       RowBox[{"beta", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["k2", "n2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+         FractionBox["1", "n2"]]}], 
+       RowBox[{"AREA", " ", "DENSITY"}]], 
+      RowBox[{
+       RowBox[{"-", "Di"}], " ", 
+       SuperscriptBox["K", "2"]}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.828516731691869*^9, 3.8285187268466463`*^9, 3.829041039202401*^9, 
+   3.8291048214934597`*^9, 3.8293015178898497`*^9, {3.829302527156671*^9, 
+   3.829302544882826*^9}, 3.829328758159524*^9, 3.83040266659247*^9, 
+   3.8304033580565233`*^9, 3.8304039339818287`*^9, 3.830407833570958*^9, 
+   3.832216166432878*^9, 3.832216503670594*^9, 3.8322167444445963`*^9, 
+   3.8322245910959272`*^9, 3.838555741269844*^9},
+ CellLabel->
+  "Out[17]//MatrixForm=",ExpressionUUID->"e22c733d-a088-441c-9166-\
+2d4da21ea609"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "b2"}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"Di", "+", "Ds"}], ")"}], " ", 
+       SuperscriptBox["K", "2"]}], "-", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["k2", "n2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+         RowBox[{
+          RowBox[{"-", "1"}], "/", "n2"}]], " ", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["AREA", "2"], " ", 
+          SuperscriptBox["beta", "3"], " ", 
+          SuperscriptBox["DENSITY", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["k2", "n2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+           RowBox[{"2", "/", "n2"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"beta", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"b2", "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "Di"}], "+", "Ds"}], ")"}], " ", 
+                 SuperscriptBox["K", "2"]}]}], ")"}], "2"]}], "-", 
+            RowBox[{"4", " ", "b2", " ", "beta", " ", "n2", " ", "rmu"}], "+", 
+            RowBox[{"4", " ", "b2", " ", "n2", " ", 
+             SuperscriptBox["rmu", "2"]}]}], ")"}]}]]}], 
+       RowBox[{"AREA", " ", 
+        SuperscriptBox["beta", "2"], " ", "DENSITY"}]]}], ")"}]}], ",", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "b2"}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"Di", "+", "Ds"}], ")"}], " ", 
+       SuperscriptBox["K", "2"]}], "+", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["k2", "n2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+         RowBox[{
+          RowBox[{"-", "1"}], "/", "n2"}]], " ", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["AREA", "2"], " ", 
+          SuperscriptBox["beta", "3"], " ", 
+          SuperscriptBox["DENSITY", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["k2", "n2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+           RowBox[{"2", "/", "n2"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"beta", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"b2", "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "Di"}], "+", "Ds"}], ")"}], " ", 
+                 SuperscriptBox["K", "2"]}]}], ")"}], "2"]}], "-", 
+            RowBox[{"4", " ", "b2", " ", "beta", " ", "n2", " ", "rmu"}], "+", 
+            RowBox[{"4", " ", "b2", " ", "n2", " ", 
+             SuperscriptBox["rmu", "2"]}]}], ")"}]}]]}], 
+       RowBox[{"AREA", " ", 
+        SuperscriptBox["beta", "2"], " ", "DENSITY"}]]}], ")"}]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.828516731691869*^9, 3.8285187268466463`*^9, 3.829041039202401*^9, 
+   3.8291048214934597`*^9, 3.8293015178898497`*^9, {3.829302527156671*^9, 
+   3.829302544882826*^9}, 3.829328758159524*^9, 3.83040266659247*^9, 
+   3.8304033580565233`*^9, 3.8304039339818287`*^9, 3.830407833570958*^9, 
+   3.832216166432878*^9, 3.832216503670594*^9, 3.8322167444445963`*^9, 
+   3.8322245910959272`*^9, 3.838555745577773*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"c0cea16d-3034-419e-8967-7c1ecac2ba26"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Tr", "[", "JacobianSCIR", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Det", "[", "JacobianSCIR", "]"}]}], "Input",
+ CellChangeTimes->{{3.8293018771107273`*^9, 3.829301903668833*^9}, {
+  3.8293024383270283`*^9, 3.829302440050798*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"547cb634-c25c-42f2-bc5c-05d5daa339f1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "b2"}], "-", 
+  RowBox[{"Di", " ", 
+   SuperscriptBox["K", "2"]}], "-", 
+  RowBox[{"Ds", " ", 
+   SuperscriptBox["K", "2"]}]}]], "Output",
+ CellChangeTimes->{{3.8293018828596773`*^9, 3.829301904515992*^9}, 
+   3.829302567216359*^9, 3.8304027577855797`*^9, 3.830403372250746*^9, 
+   3.830407858584001*^9, 3.8322167768750057`*^9, 3.832224596745595*^9, 
+   3.8385557479223557`*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"05ed2fc0-6972-4f89-a350-3a4d23642e0e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"b2", " ", "Di", " ", 
+   SuperscriptBox["K", "2"]}], "+", 
+  RowBox[{"Di", " ", "Ds", " ", 
+   SuperscriptBox["K", "4"]}], "+", 
+  RowBox[{"b2", " ", "n2", " ", "rmu"}], "-", 
+  FractionBox[
+   RowBox[{"b2", " ", "n2", " ", 
+    SuperscriptBox["rmu", "2"]}], "beta"]}]], "Output",
+ CellChangeTimes->{{3.8293018828596773`*^9, 3.829301904515992*^9}, 
+   3.829302567216359*^9, 3.8304027577855797`*^9, 3.830403372250746*^9, 
+   3.830407858584001*^9, 3.8322167768750057`*^9, 3.832224596745595*^9, 
+   3.83855574792523*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"721b5f58-4eec-4261-a8e8-9f7091d4281d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"Eigenvalues", "[", "JacobianSCIR", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8385556756406593`*^9, 3.838555690223271*^9}, {
+  3.838555761443124*^9, 3.838555771470044*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"f4daf7c9-335f-4ed7-8c34-d354f8ad7be8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "b2"}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"Di", "+", "Ds"}], ")"}], " ", 
+       SuperscriptBox["K", "2"]}], "-", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["k2", "n2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+         RowBox[{
+          RowBox[{"-", "1"}], "/", "n2"}]], " ", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["AREA", "2"], " ", 
+          SuperscriptBox["beta", "3"], " ", 
+          SuperscriptBox["DENSITY", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["k2", "n2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+           RowBox[{"2", "/", "n2"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"beta", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"b2", "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "Di"}], "+", "Ds"}], ")"}], " ", 
+                 SuperscriptBox["K", "2"]}]}], ")"}], "2"]}], "-", 
+            RowBox[{"4", " ", "b2", " ", "beta", " ", "n2", " ", "rmu"}], "+", 
+            RowBox[{"4", " ", "b2", " ", "n2", " ", 
+             SuperscriptBox["rmu", "2"]}]}], ")"}]}]]}], 
+       RowBox[{"AREA", " ", 
+        SuperscriptBox["beta", "2"], " ", "DENSITY"}]]}], ")"}]}], ",", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "b2"}], "-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"Di", "+", "Ds"}], ")"}], " ", 
+       SuperscriptBox["K", "2"]}], "+", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["k2", "n2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+         RowBox[{
+          RowBox[{"-", "1"}], "/", "n2"}]], " ", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["AREA", "2"], " ", 
+          SuperscriptBox["beta", "3"], " ", 
+          SuperscriptBox["DENSITY", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["k2", "n2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"beta", "-", "rmu"}], ")"}]}], "rmu"], ")"}], 
+           RowBox[{"2", "/", "n2"}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"beta", " ", 
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{"b2", "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "Di"}], "+", "Ds"}], ")"}], " ", 
+                 SuperscriptBox["K", "2"]}]}], ")"}], "2"]}], "-", 
+            RowBox[{"4", " ", "b2", " ", "beta", " ", "n2", " ", "rmu"}], "+", 
+            RowBox[{"4", " ", "b2", " ", "n2", " ", 
+             SuperscriptBox["rmu", "2"]}]}], ")"}]}]]}], 
+       RowBox[{"AREA", " ", 
+        SuperscriptBox["beta", "2"], " ", "DENSITY"}]]}], ")"}]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.838555750427176*^9, 3.838555772575129*^9}},
+ CellLabel->"Out[22]=",ExpressionUUID->"784a1b28-97e5-4724-be58-a3b690f49c41"]
+}, Open  ]],
+
+Cell[BoxData["`"], "Input",ExpressionUUID->"8158dc11-59bc-4032-965e-f043a520c7e2"]
+},
+WindowSize->{1440, 762},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+TaggingRules->{"TryRealOnly" -> False},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"12.1 para Linux x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c578c384-4ead-4f65-9ae5-9010aea690f0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2174, 55, 246, "Input",ExpressionUUID->"ca18a6ab-905c-4441-bfe2-d4970d94157f"],
+Cell[2757, 79, 1052, 19, 41, "Message",ExpressionUUID->"ab6a43b1-3409-45c8-946e-c5ee0e7e4928"],
+Cell[3812, 100, 877, 17, 26, "Message",ExpressionUUID->"c31e9a57-3721-44b8-8dc2-020760820907"],
+Cell[4692, 119, 1213, 29, 74, "Output",ExpressionUUID->"728fde86-ce40-4c19-941d-c608362ef938"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5942, 153, 1538, 43, 125, "Input",ExpressionUUID->"2852cebf-22ee-4edc-a2c1-a83daa82ea6a"],
+Cell[7483, 198, 1529, 41, 65, "Output",ExpressionUUID->"857544ca-357d-4d35-842d-20fdb048b89b"],
+Cell[9015, 241, 1346, 37, 56, "Output",ExpressionUUID->"b03bef18-e59b-4422-92f8-0ab94169d6ea"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10398, 283, 3537, 106, 173, "Input",ExpressionUUID->"45f6cca2-fd43-4bb7-9ca5-2beddef9d53c"],
+Cell[13938, 391, 1383, 36, 67, "Output",ExpressionUUID->"77f283f2-e9ef-4ad7-a8b3-716c01ff390d"],
+Cell[15324, 429, 770, 14, 56, "Output",ExpressionUUID->"3590c478-0bb2-4fb8-8875-33be63533a8c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16131, 448, 534, 13, 84, "Input",ExpressionUUID->"53b1e342-9b6d-44c9-8e9f-5a7a6c74794b"],
+Cell[16668, 463, 1422, 38, 67, "Output",ExpressionUUID->"62928121-0bbd-4c5d-819a-029406232d9b"],
+Cell[18093, 503, 790, 16, 56, "Output",ExpressionUUID->"b86292d0-bb50-47f5-8482-75be0c83cfba"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18920, 524, 486, 13, 103, "Input",ExpressionUUID->"e61f41fb-42ff-4304-931d-e5c9277b051b"],
+Cell[19409, 539, 1251, 39, 65, "Output",ExpressionUUID->"3d96703d-6d53-4f4d-a95a-ff1885ea2110"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20697, 583, 2062, 56, 200, "Input",ExpressionUUID->"b85a2666-35a3-4e25-b8c7-6f7d1314b692"],
+Cell[22762, 641, 1679, 46, 75, "Output",ExpressionUUID->"9d76a601-3e88-43b6-82b2-d689dc0d8200"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24478, 692, 520, 9, 100, "Input",ExpressionUUID->"ca931e29-005b-4a03-a4af-d01bb692746d"],
+Cell[25001, 703, 2079, 58, 135, "Output",ExpressionUUID->"e22c733d-a088-441c-9166-2d4da21ea609"],
+Cell[27083, 763, 3985, 109, 177, "Output",ExpressionUUID->"c0cea16d-3034-419e-8967-7c1ecac2ba26"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31105, 877, 334, 5, 100, "Input",ExpressionUUID->"547cb634-c25c-42f2-bc5c-05d5daa339f1"],
+Cell[31442, 884, 496, 11, 39, "Output",ExpressionUUID->"05ed2fc0-6972-4f89-a350-3a4d23642e0e"],
+Cell[31941, 897, 631, 14, 58, "Output",ExpressionUUID->"721b5f58-4eec-4261-a8e8-9f7091d4281d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32609, 916, 310, 5, 55, "Input",ExpressionUUID->"f4daf7c9-335f-4ed7-8c34-d354f8ad7be8"],
+Cell[32922, 923, 3619, 103, 177, "Output",ExpressionUUID->"784a1b28-97e5-4724-be58-a3b690f49c41"]
+}, Open  ]],
+Cell[36556, 1029, 82, 0, 35, "Input",ExpressionUUID->"8158dc11-59bc-4032-965e-f043a520c7e2"]
+}
+]
+*)
+
