@@ -1,7 +1,7 @@
 # Bioinformatics_MasterThesis
 Code made to get analytical results and figures for the master thesis:
 
-**Changing confinement policiesgenerate Covid-19 infectionwaves**
+**Changing confinement policies generate Covid-19 infection waves**
 
 done in fulfillment of the requirements for the degree of Máster Universitario en Bioinformática of the Universidad de Valencia.
 
